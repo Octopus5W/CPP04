@@ -6,7 +6,7 @@
 /*   By: hdelbecq <hdelbecq@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/28 16:11:49 by hdelbecq          #+#    #+#             */
-/*   Updated: 2025/07/02 19:15:49 by hdelbecq         ###   ########.fr       */
+/*   Updated: 2025/07/02 21:59:39 by hdelbecq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,11 +15,6 @@
 Animal::Animal() : type("")
 {
 	std::cout << "default constructor Animal called." << std::endl;
-}
-
-Animal::Animal(const std::string &type) : type(type)
-{
-	std::cout << "constructor Animal called." << std::endl;
 }
 
 Animal::Animal(const Animal &other) : type(other.type)
