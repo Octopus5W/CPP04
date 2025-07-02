@@ -1,32 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Animal.cpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdelbecq <hdelbecq@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/28 16:11:12 by hdelbecq          #+#    #+#             */
-/*   Updated: 2025/07/02 22:02:39 by hdelbecq         ###   ########.fr       */
+/*   Created: 2025/06/28 16:11:49 by hdelbecq          #+#    #+#             */
+/*   Updated: 2025/07/02 22:04:56 by hdelbecq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
+#include "Animal.hpp"
 
-#include <iostream>
+Animal::~Animal()
+{
+	std::cout << "destructor Animal called." << std::endl;
+}
 
-class Animal {
-	protected:
-	    std::string type;
-	
-	public:
-	    Animal();
-	    Animal(const Animal &other);
-	    Animal &operator=(const Animal &other);
-	    virtual ~Animal();
+void Animal::makeSound() const
+{
+	std::cout << "Animal makes a sound." << std::endl;
+}
 
-	    virtual void makeSound() const;
-	    std::string getType() const;
-};
+std::string Animal::getType() const
+{
+	return type;
+}
 
-#endif
+

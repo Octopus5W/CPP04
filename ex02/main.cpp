@@ -1,32 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hdelbecq <hdelbecq@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/28 16:11:12 by hdelbecq          #+#    #+#             */
-/*   Updated: 2025/07/02 22:02:39 by hdelbecq         ###   ########.fr       */
+/*   Created: 2025/06/16 09:18:47 by hdelbecq          #+#    #+#             */
+/*   Updated: 2025/07/02 21:48:43 by hdelbecq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-#define ANIMAL_HPP
-
 #include <iostream>
+#include "Cat.hpp"
+#include "Dog.hpp"
+#include "WrongCat.hpp"
 
-class Animal {
-	protected:
-	    std::string type;
+int main()
+{
+	const Animal *j[5];
+
+	for (int i = 0; i < 5; ++i)
+	{
+		if (i < 2)
+			j[i] = new Dog();
+		else
+			j[i] = new Cat();
+	}
 	
-	public:
-	    Animal();
-	    Animal(const Animal &other);
-	    Animal &operator=(const Animal &other);
-	    virtual ~Animal();
-
-	    virtual void makeSound() const;
-	    std::string getType() const;
-};
-
-#endif
+	for (int i = 0; i < 5; ++i)
+	{
+		j[i]->makeSound();
+		delete j[i];
+	}
+	return 0;
+}
