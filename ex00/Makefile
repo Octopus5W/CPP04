@@ -6,14 +6,14 @@
 #    By: hdelbecq <hdelbecq@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/11 16:20:50 by hdelbecq          #+#    #+#              #
-#    Updated: 2025/06/28 16:37:58 by hdelbecq         ###   ########.fr        #
+#    Updated: 2025/07/02 20:36:11 by hdelbecq         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = Polymorphisme
 C++ = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
-SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp WrongDog.cpp
+SRC = main.cpp Animal.cpp Cat.cpp Dog.cpp WrongAnimal.cpp WrongCat.cpp
 OBJ = $(SRC:.cpp=.o)
 
 all: $(NAME)

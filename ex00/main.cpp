@@ -6,7 +6,7 @@
 /*   By: hdelbecq <hdelbecq@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/16 09:18:47 by hdelbecq          #+#    #+#             */
-/*   Updated: 2025/07/02 19:17:44 by hdelbecq         ###   ########.fr       */
+/*   Updated: 2025/07/02 20:33:15 by hdelbecq         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,7 @@ int main()
 	delete meta;
 	delete j;
 	delete i;
+	delete wrongMeta;
+	delete wrongCat;
 	return 0;
 }
