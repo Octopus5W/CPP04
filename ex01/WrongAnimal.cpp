@@ -14,6 +14,7 @@
 
 WrongAnimal::WrongAnimal()
 {
+	type = "";
 	std::cout << "default constructor WrongAnimal called." << std::endl;
 }
 
